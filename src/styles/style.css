@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+	background-color: #151925;
+	font-family: system-ui;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.Main {
+	display: flex;
+	flex-direction: column;
+}
+
+.Header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 50px 0 40px;
+	height: 100px;
+}
+
+.Header a {
+	color: white;
+}
+
+.Header__logo a {
+	color: #e0e0e0;
+}
+
+.Footer {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Footer a {
+	margin: 0 10px 0 10px;
+	transition: 300ms;
+}
+
+.Footer a:hover {
+	opacity: 0.75;
+}
+
+.Characters {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 300px);
+	margin: 0 100px 0 100px;
+}
+
+.CharacterCard {
+	width: 100%;
+	margin: 10px 10px 25px 10px;
+	animation: 500ms ease-in-out appear;
+}
+
+.CharacterCard a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CharacterCard img {
+	max-width: 80%;
+	transition: 300ms;
+}
+
+.CharacterCard h2 {
+	margin: 5px 0 0 0;
+	text-align: left;
+}
+
+.CharacterCard:hover img,
+.CharacterCard:hover h2 {
+	opacity: 0.75;
+}
+
+.Character {
+	min-height: calc(100vh - 60px - 100px);
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 500px);
+
+	animation: 500ms ease-in-out appear;
+}
+
+.Character__image {
+	max-width: 100%;
+	text-align: center;
+}
+
+.Character__info h1,
+.Character__info h3 {
+	margin: 0;
+}
+
+.Character__info h1 {
+	color: #e0e0e0;
+}
+
+.Character__info h3 {
+	font-weight: normal;
+	margin: 5px 0 5px 0;
+}
+
+.Character__info h3 span {
+	font-style: italic;
+}
+
+.Error404 {
+	min-height: calc(100vh - 60px - 100px);
+}
+
+.Error404 h1 {
+	text-align: center;
+}
+
+.Error404 h1 span {
+	color: #f5fd80;
+}
+
+.About {
+	min-height: calc(100vh - 60px - 100px);
+}
+
+.About h1,
+.About p {
+	text-align: center;
+}
+
+.About p a {
+	text-decoration: underline;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 1020px) {
+	.Character__info {
+		text-align: center;
+	}
+}
